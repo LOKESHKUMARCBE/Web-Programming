@@ -1,0 +1,38 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+}
+
+.header {
+  background-color: #333;
+  color: white;
+  padding: 10px;
+  position: relative;
+  z-index: 3;
+}
+
+.hero {
+  background-image: url('hero-background.jpg');
+  background-size: cover;
+  color: white;
+  text-align: center;
+  padding: 100px;
+  position: relative;
+  z-index: 2;
+}
+
+.content {
+  background-color: #f0f0f0;
+  padding: 20px;
+  position: relative;
+  z-index: 1;
+}
+
+.footer {
+  background-color: #333;
+  color: white;
+  padding: 10px;
+  position: relative;
+  z-index: 3;
+}

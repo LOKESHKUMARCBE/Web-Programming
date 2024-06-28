@@ -1,0 +1,111 @@
+
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Social Media Registration</title>
+  <style>
+    /* Add your CSS styles here */
+    body {
+      font-family: Arial, sans-serif;
+    }
+
+    .container {
+      width: 400px;
+      margin: 0 auto;
+      padding: 20px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      background-color: #f9f9f9;
+    }
+
+    .container h2 {
+      text-align: center;
+    }
+
+    .form-group {
+      margin-bottom: 15px;
+    }
+
+    .form-group label {
+      display: block;
+      margin-bottom: 5px;
+    }
+
+    .form-group input[type="text"],
+    .form-group input[type="email"],
+    .form-group input[type="password"],
+    .form-group input[type="date"] {
+      width: calc(100% - 12px);
+      padding: 8px;
+      border: 1px solid #ccc;
+      border-radius: 3px;
+    }
+
+    .form-group button[type="submit"] {
+      width: 100%;
+      padding: 10px;
+      border: none;
+      border-radius: 3px;
+      background-color: #007bff;
+      color: #fff;
+      cursor: pointer;
+    }
+
+    .error-message {
+      color: red;
+      margin-top: 5px;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h2>Social Media Registration</h2>
+
+    <form id="registrationForm">
+      <div class="form-group">
+        <label for="username">Username:</label>
+        <input type="text" id="username" required>
+      </div>
+      <div class="form-group">
+        <label for="email">Email:</label>
+        <input type="email" id="email" required>
+      </div>
+      <div class="form-group">
+        <label for="birthdate">Date of Birth:</label>
+        <input type="date" id="birthdate" required>
+        <div id="ageErrorMessage" class="error-message"></div>
+      </div>
+      <button type="submit">Register</button>
+    </form>
+  </div>
+
+  <script>
+    // Calculate the maximum allowed birthdate (18 years ago)
+    const maxBirthdate = new Date();
+    maxBirthdate.setFullYear(maxBirthdate.getFullYear() - 18);
+    const maxBirthdateString = maxBirthdate.toISOString().split('T')[0]; // Format as YYYY-MM-DD
+
+    // Set the maximum date for the birthdate input
+    document.getElementById("birthdate").setAttribute("max", maxBirthdateString);
+
+    // Validate birthdate on form submission
+    document.getElementById("registrationForm").addEventListener("submit", function(event) {
+      const birthdateInput = document.getElementById("birthdate").value;
+      const birthdate = new Date(birthdateInput);
+      const today = new Date();
+      const minAge = 18;
+      
+      const ageInMilliseconds = today - birthdate;
+      const ageInYears = ageInMilliseconds / (1000 * 60 * 60 * 24 * 365.25);
+
+      if (ageInYears < minAge) {
+        event.preventDefault();
+        document.getElementById("ageErrorMessage").textContent = "You must be at least 18 years old to register.";
+      } else {
+        document.getElementById("ageErrorMessage").textContent = "";
+      }
+    });
+  </script>
+</body>
+</html>

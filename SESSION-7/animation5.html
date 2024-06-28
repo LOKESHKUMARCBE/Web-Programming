@@ -1,0 +1,28 @@
+<html lang="en">
+ <head> 
+  <title>  text blink</title> 
+  <style>
+.flash {
+   -webkit-animation-name:flash;
+   -webkit-animation-duration:2s;
+   -webkit-animation-iteration-count:infinite;
+   -webkit-animation-timing-function:ease-in-out;
+   -webkit-animation-direction:alternate;
+}
+
+@-webkit-keyframes flash  {
+   from {
+      color:Chartreuse;
+   }
+   
+   to {
+      color:RED;
+   }
+
+}
+</style> 
+ </head> 
+ <body translate="no"> 
+  <p class="flash">Blink, blink</p>  
+ </body>
+</html>

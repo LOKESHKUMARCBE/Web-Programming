@@ -1,0 +1,39 @@
+<html>
+<head>
+  
+  <title>Cricket Matches Page</title>
+ </head>
+<body>
+  <h1>Cricket Matches Page</h1>
+
+  <div id="matchCountdown"></div>
+
+  <script>
+    
+    const matchStartTime = new Date("2024-02-07 TO 20:20:00Z").getTime();
+
+    
+    const countdownInterval = setInterval(updateCountdown, 1000);
+
+    function updateCountdown() 
+	{
+      const currentTime = new Date().getTime();
+      const timeDifference = matchStartTime - currentTime;
+
+      if (timeDifference <= 0) {
+        clearInterval(countdownInterval);
+        document.getElementById("matchCountdown").innerHTML = "<p>The match has started!</p>";
+      } else {
+        const hours = Math.floor((timeDifference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+        const minutes = Math.floor((timeDifference % (1000 * 60 * 60)) / (1000 * 60));
+        const seconds = Math.floor((timeDifference % (1000 * 60)) / 1000);
+
+        document.getElementById("matchCountdown").innerHTML = `
+          <p>Time until match starts:</p>
+          <p>${hours} hours ${minutes} minutes ${seconds} seconds</p>
+        `;
+      }
+    }
+  </script>
+</body>
+</html>

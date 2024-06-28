@@ -1,0 +1,49 @@
+<html>
+ <head> 
+  <meta name="viewport" content="width=device-width, initial-scale=1"> 
+  <style id="compiled-css" type="text/css">
+#progressbar {
+   background-color:Chartreuse;
+   border-radius:9px;
+   padding:4px;
+   width:401px;
+}
+
+#progressbar div {
+   background-color:yellow;
+   width:51%;
+   height:11px;
+   border-radius:6px;
+   animation:loadbar 3s;
+   -webkit-animation:loadbar 3s;
+}
+
+@keyframes loadbar  {
+   0% {
+      width:0%;
+   }
+   
+   100% {
+      width:51%;
+   }
+
+}
+
+@-webkit-keyframes loadbar  {
+   0% {
+      width:0%;
+   }
+   
+   100% {
+      width:51%;
+   }
+
+}
+</style> 
+ </head> 
+ <body> 
+  <div id="progressbar"> 
+   <div></div> 
+  </div>  
+ </body>
+</html>

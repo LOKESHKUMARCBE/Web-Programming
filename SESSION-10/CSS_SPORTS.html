@@ -1,0 +1,143 @@
+<html>
+<head>
+  <title>Cricket News Portal</title>
+  <style>
+    body 
+	{
+      font-family: 'Arial', sans-serif;
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      background-color: #f5f5f5;
+      color: #333;
+    }
+
+    header {
+      background-color: #333;
+      color: white;
+      text-align: center;
+      padding: 20px;
+    }
+
+    nav {
+      background-color: #555;
+      padding: 10px;
+      text-align: center;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      padding: 10px;
+      margin: 0 10px;
+    }
+
+    .news-container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      padding: 20px;
+    }
+
+    .news-card {
+      flex: 0 0 48%;
+      background-color: #fff;
+      border: 1px solid #ddd;
+      margin: 10px;
+      padding: 15px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      position: relative;
+      overflow: hidden;
+      transition: transform 0.3s ease-in-out;
+    }
+
+    .news-card:hover {
+      transform: translateY(-10px);
+    }
+
+    .news-card img {
+      width: 100%;
+      height: auto;
+      border-radius: 8px;
+      margin-bottom: 10px;
+    }
+
+    .news-card h2 {
+      font-size: 18px;
+      margin-bottom: 10px;
+    }
+
+    .news-card p {
+      font-size: 14px;
+      line-height: 1.4;
+    }
+
+    footer {
+      background-color: #333;
+      color: white;
+      text-align: center;
+      padding: 10px;
+      position: fixed;
+      bottom: 0;
+      width: 100%;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Cricket News Portal</h1>
+  </header>
+
+  <nav>
+    <a href="#" data-tooltip="Home">Home</a>
+    <a href="matches.html" data-tooltip="Matches">Matches</a>
+    <a href="#" data-tooltip="Players">Players</a>
+	 <a href="sports.html" data-tooltip="Sports">Sports</a>
+    <a href="Teams.html" data-tooltip="Teams">Teams</a>
+    <a href="#" data-tooltip="Stats">Stats</a>
+  </nav>
+
+  <div class="news-container">
+    <div class="news-card">
+      <img src="cricket_image1.jpg" alt="Cricket Image 1">
+      <h2>Exciting Match Ends in a Thrilling Tie</h2>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vel eros id est consectetur cursus sit amet vitae risus.</p>
+      <button>Read More</button>
+    </div>
+
+    <div class="news-card">
+      <img src="cricket_image2.jpg" alt="Cricket Image 2">
+      <h2>New Talent Shines in T20 Series</h2>
+      <p>Quisque efficitur, libero sit amet gravida dictum, odio tellus elementum neque, id sollicitudin tortor elit vitae turpis.</p>
+      <button>Read More</button>
+    </div>
+
+    <div class="news-card">
+      <img src="cricket_image3.jpg" alt="Cricket Image 3">
+      <h2>Top Teams Battle for Championship Title</h2>
+      <p>Suspendisse hendrerit odio vel massa lacinia vestibulum. Nunc euismod, orci nec iaculis vestibulum, turpis est commodo est.</p>
+      <button>Read More</button>
+    </div>
+
+    <div class="news-card">
+      <img src="cricket_image4.jpg" alt="Cricket Image 4">
+      <h2>Player Spotlight: Rising Star of the Month</h2>
+      <p>Cras vel nisi at lacus luctus volutpat. Sed vehicula semper velit id consequat. Vivamus consectetur ex nec semper tristique.</p>
+      <button>Read More</button>
+    </div>
+
+    <div class="news-card">
+      <img src="cricket_image5.jpg" alt="Cricket Image 5">
+      <h2>Key Moments in the Ongoing Test Series</h2>
+      <p>Nullam nec orci at turpis venenatis luctus. Nullam quis nisl vitae turpis fringilla malesuada a vitae libero. </p>
+      <button>Read More</button>
+    </div>
+  </div>
+
+  <footer>
+    &copy; 2024 Cricket News Portal
+  </footer>
+
+</body>
+</html>

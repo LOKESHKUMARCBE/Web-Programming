@@ -1,0 +1,112 @@
+<html>>
+   <head> 
+      <style type="text/css">
+div#wrapper {
+   height: 100%;
+   margin: auto;
+   position: relative;
+}
+div#left {
+   height: 100%;
+   position : fixed;
+   width: 256px;
+   overflow-y: auto;
+   background-color: #fcfcfc;
+}
+div#right {
+   height: 100%;
+   position: relative;
+   margin-left: 256px;
+}
+div#right div#bar-1 {
+   overflow: hidden;
+   position: absolute;
+   left: 0;
+   right: 17px;
+   height: 64px;
+   z-index:4;
+   top: 0;
+   background-color: #eaeaea;
+}
+div#right div#bar-2 {
+   overflow: hidden;
+   position: absolute;
+   left: 0;
+   right: 17px;
+   top: 64px;
+   z-index:4;
+   height: 32px;
+   background-color: #979797;
+}
+div#right div#content {
+   position: absolute;
+   left: 0;
+   right: 0;
+   top: 0px;
+   bottom: 0px;
+   padding-top:96px;
+   padding-bottom:224px;
+   overflow-y: scroll;
+   z-index:2;
+}
+div#right div#bar-3 {
+   overflow: hidden;
+   position: absolute;
+   left: 0;
+   right: 17px;
+   z-index:4;
+   bottom: 128px;
+   height: 96px;
+   background-color: #eaeaea;
+}
+div#right div#bar-4 {
+   overflow: hidden;
+   position: absolute;
+   left: 0;
+   right: 17px;
+   z-index:4;
+   bottom: 0;
+   height: 128px;
+   background-color: #d5d5d5;
+}
+
+      </style> 
+   </head> 
+   <body> 
+      <div id="wrapper"> 
+         <div id="left"> 
+            <ul> 
+               <li> 
+                  <a href="#" title="title message">Menu item</a> 
+               </li> 
+               <li> 
+                  <a href="#" title="title message">Menu item</a> 
+               </li> 
+               <li> 
+                  <a href="#" title="title message">Menu item</a> 
+               </li> 
+            </ul> 
+         </div> 
+         <div id="right"> 
+            <div id="bar-1">
+                bar-1 
+            </div> 
+            <div id="bar-2">
+                bar-2 
+            </div> 
+            <div id="content"> 
+               <div style="height:400px;background-color:#ff0;"></div> 
+               <div style="height:400px;background-color:#f0f;"></div> 
+               <div style="height:400px;background-color:#0f0;"></div> 
+               <div style="height:400px;background-color:#00f;"></div> 
+            </div> 
+            <div id="bar-3">
+                bar-3 
+            </div> 
+            <div id="bar-4">
+                bar-4 
+            </div> 
+         </div> 
+      </div>  
+   </body>
+</html>

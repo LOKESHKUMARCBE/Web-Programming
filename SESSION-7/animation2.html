@@ -1,0 +1,42 @@
+<html>
+ <head> 
+  <meta name="viewport" content="width=device-width, initial-scale=1"> 
+  <style id="compiled-css" type="text/css">
+  
+.hover_element:hover~.first_div .second_div .third_div .apply_hover {
+   -webkit-animation-name:blinker;
+   -webkit-animation-duration:2s;
+   -webkit-animation-timing-function:linear;
+   -webkit-animation-iteration-count:infinite;
+   -moz-animation-name:blinker;
+   -moz-animation-duration:2s;
+   -moz-animation-timing-function:linear;
+   -moz-animation-iteration-count:infinite;
+   animation-name:blinker;
+   animation-duration:2s;
+   animation-timing-function:linear;
+   animation-iteration-count:infinite;
+   color:Chartreuse;
+}
+
+</style> 
+ </head> 
+ <body> 
+  <table class="hover_element"> 
+   <tbody> 
+    <tr> 
+     <td>Hover me!</td> 
+    </tr> 
+   </tbody> 
+  </table> 
+  <div class="first_div"> 
+   <div class="second_div"> 
+    <div class="third_div"> 
+     <div class="apply_hover">
+       Apply hover on this element 
+     </div> 
+    </div> 
+   </div> 
+  </div>  
+ </body>
+</html>
